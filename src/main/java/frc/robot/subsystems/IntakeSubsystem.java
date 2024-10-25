@@ -15,15 +15,12 @@ public class IntakeSubsystem extends SubsystemBase {
 
     boolean enabled = false;
 
-    public IntakeSubsystem() {
-
-    }
+    public IntakeSubsystem() { }
 
     public Command runIntakeCommand() {
         return this.run(
             () -> {
-                System.out.println(enabled);
-                if (this.enabled) this.on(); 
+                if (enabled) this.on(); 
                 else this.off();
             }
         );
